@@ -1,0 +1,8 @@
+{
+  "name": "server-pizzare",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/start.js",
+  "author": "sebastianjnuwu",
+  "license": "Apache-2.0"
+}
