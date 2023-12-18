@@ -1,10 +1,8 @@
 // console.log('start...');
 
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(() => {
   
-  M.Sidenav.init(document.querySelectorAll('.side-menu'), { edge: 'right' });
-   
-  M.Sidenav.init(document.querySelectorAll('.side-form'), { edge: 'left' });
+  $('.sidenav').sidenav();
   
 });
 
@@ -13,3 +11,4 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('public/js/service-work.js').then(sw => console.log('[ Pizzare ] - Registered')).catch(err => console.log(`[ Pizzare ] - ${err.message}`));
   });
  };
+ 

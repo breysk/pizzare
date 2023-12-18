@@ -7,18 +7,22 @@
 
 nav {
   background: var(--primary);
-  border-bottom: 10px solid var(--secondary);
+  border-bottom: 15px solid var(--secondary)
 }
 
-nav a {
-  text-transform: uppercase;
+nav .brand-logo {
   color: var(--title);
-}
-
-nav a span {
+  font-size: 32px;
   font-weight: bold;
 }
 
-nav .sidenav-trigger {
-  margin: 0;
+nav .brand-logo img {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.tab a {
+  color: var(--title) !important;
+  font-weight: bold;
 }
