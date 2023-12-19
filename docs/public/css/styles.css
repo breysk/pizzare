@@ -1,8 +1,17 @@
-
 :root {
   --primary: #FFE9D2;
   --secondary: #FFE1C4;
   --title: #ff951f;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 nav {
@@ -25,4 +34,10 @@ nav .brand-logo img {
 .tab a {
   color: var(--title) !important;
   font-weight: bold;
+}
+
+
+.page-footer {
+  background-color: var(--secondary) !important;
+  color: var(--title) !important;
 }
