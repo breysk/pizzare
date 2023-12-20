@@ -1,13 +1,9 @@
 const server = `http://0.0.0.0:3000`;
 
-$(document).ready(() => {
-  $('.sidenav').sidenav();
-});
-
 if ('serviceWorker' in navigator) {
 
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('public/js/work.js')
+    navigator.serviceWorker.register('src/js/work.js')
     .then(registration => {
       console.log('[ Pizzare ] - Currently working')
       return registration.update();
