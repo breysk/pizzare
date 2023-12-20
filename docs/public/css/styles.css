@@ -19,6 +19,11 @@ nav {
   border-bottom: 15px solid var(--secondary)
 }
 
+nav .nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
 nav .brand-logo {
   color: var(--title);
   font-size: 32px;
@@ -36,8 +41,42 @@ nav .brand-logo img {
   font-weight: bold;
 }
 
+.material-icons {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.material-icons:hover,
+.material-icons.active {
+  color: #ec9300ac;
+  transform: scale(0.98);
+  opacity: 0.41;
+}
 
 .page-footer {
   background-color: var(--secondary) !important;
   color: var(--title) !important;
+}
+
+.user-view {
+  overflow: hidden;
+}
+
+.user-view .info {
+  display: inline-block;
+}
+
+.user-view .name, .user-view .email {
+  background-color: #fff;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+  border: 1px solid var(--title);
+  color: black !important;
+}
+
+
+.circle {
+  border: 1px solid var(--title);
+  border-radius: 50%;
 }

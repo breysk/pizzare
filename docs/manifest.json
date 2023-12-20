@@ -2,6 +2,7 @@
   "name": "Pizzare",
   "short_name": "pizzare",
   "start_url": "/index.html",
+  "version": "production-1.0.1",
   "description": "Your favorite pizzeria!",
   "display": "standalone",
   "background_color": "#FFE9D2",
@@ -18,9 +19,19 @@
       "sizes": "96x96"
     },
     {
+      "src": "public/img/icons/icon-100x100.png",
+      "type": "image/png",
+      "sizes": "100x100"
+    },
+    {
       "src": "public/img/icons/icon-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
+    },
+    {
+      "src": "public/img/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
     },
     {
       "src": "public/img/icons/icon-152x152.png",

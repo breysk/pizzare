@@ -1,8 +1,16 @@
 {
   "name": "server-pizzare",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "src/start.js",
   "author": "sebastianjnuwu",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "fastify": "^4.25.1",
+    "morgan": "^1.10.0",
+    "web-push": "^3.6.6"
+  }
 }
