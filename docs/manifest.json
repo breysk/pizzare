@@ -2,7 +2,7 @@
   "name": "Pizzare",
   "short_name": "pizzare",
   "start_url": "/index.html",
-  "version": "production-1.0.1",
+  "version": "production-1.0.2",
   "description": "Your favorite pizzeria!",
   "display": "standalone",
   "background_color": "#FFE9D2",

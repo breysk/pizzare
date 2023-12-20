@@ -2,6 +2,7 @@
   --primary: #FFE9D2;
   --secondary: #FFE1C4;
   --title: #ff951f;
+  --text-color: #000000ac;
 }
 
 body {
@@ -58,25 +59,23 @@ nav .brand-logo img {
   color: var(--title) !important;
 }
 
-.user-view {
-  overflow: hidden;
-}
 
 .user-view .info {
   display: inline-block;
 }
 
-.user-view .name, .user-view .email {
-  background-color: #fff;
-  padding: 3px;
-  margin: 2px;
-  border-radius: 10px;
+.user-view .info .circle {
+  width: 125px;
+  height: 120px;
   border: 1px solid var(--title);
-  color: black !important;
 }
 
-
-.circle {
-  border: 1px solid var(--title);
-  border-radius: 50%;
+.user-view .info a {
+  text-align: center;
+  background-color: var(--secondary);
+  border: 1.9px solid var(--title);
+  border-radius: 30px;
+  padding: 5px;
+  margin: 5px;
+  color: var(--text-color) !important;
 }
