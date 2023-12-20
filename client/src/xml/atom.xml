@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Pizzare Feed</title>
+  <link href="https://pizzare.vercel.app" rel="self"/>
+  <link href="https://pizzare.vercel.app"/>
+  <updated>2023-12-20T00:00:00Z</updated>
+  <author>
+    <name>
+      Pizzare
+    </name>
+  </author>
+  <id>https://pizzare.vercel.app</id>
+  <entry>
+    <title>Conheça a melhor pizzaria da região</title>
+    <link href="https://pizzare.vercel.app/#event"/>
+    <id>https://pizzare.vercel.app/#event</id>
+    <updated>2023-12-20T00:00:00Z</updated>
+    <summary>Pizzare esta localizada em Adrianópolis, Granja - Ceara</summary>
+  </entry>
+</feed>

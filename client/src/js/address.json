@@ -1,0 +1,16 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "name": "Pizzare",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estrada de Adrianópolis - Av. São Sebastião, s/n",
+    "addressLocality": "Adrianópolis, Granja - CE",
+    "addressRegion": "nordeste",
+    "postalCode": "62430-000", 
+    "addressCountry": "Brasil"
+  },
+  "telephone": "+55 (88) 9 8109-1805",
+  "url": "http://pizzare.vercel.app",
+  "image": "http://pizzare.vercel.app/src/img/favicon.ico"
+}

@@ -1,0 +1,69 @@
+# Don't try to knock us down because we're going to fall!
+#
+#              _____
+#             |     |
+#             | | | |
+#             |_____|
+#       ____ ___|_|___ ____
+#      ()___)         ()___)
+#      // /|           |\ \\
+#     // / |           | \ \\
+#    (___) |___________| (___)
+#    (___)   (_______)   (___)
+#    (___)     (___)     (___)
+#    (___)      |_|      (___)
+#    (___)  ___/___\___   | |
+#     | |  |           |  | |
+#     | |  |___________| /___\ 
+#    /___\  |||     ||| //   \\
+#   //   \\ |||     ||| \\   //
+#   \\   // |||     |||  \\ //
+#    \\ // ()__)   (__()
+#          ///       \\\ 
+#         ///         \\\ 
+#       _///___     ___\\\_
+#      |_______|   |_______|
+#
+
+User-agent: *
+Disallow: /pages/user/login
+
+User-agent: Googlebot
+Disallow: /pages/user/login
+
+User-agent: Twitterbot
+Disallow: /pages/user/login
+
+User-agent: YandexBot
+Disallow: /pages/user/login
+
+User-agent: bingbot
+Disallow: /pages/user/login
+
+User-agent: facebookexternalhit
+Disallow: /pages/user/login
+
+User-Agent: Slurp
+Disallow: /pages/user/login
+
+User-Agent: DuckDuckBot
+Disallow: /pages/user/login
+
+User-agent: baidu
+Disallow: /pages/user/login
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /pages/user/login
+
+User-agent: TelegramBot
+Disallow: /pages/user/login
+
+User-agent: Discordbot
+Disallow: /pages/user/login
+
+User-agent: Applebot
+Disallow: /pages/user/login
+
+Sitemap: https://pizzare.vercel.app/src/xml/sitemap.xml
+
+# In case of any problems, please contact us via email: pizzare@gmail.com

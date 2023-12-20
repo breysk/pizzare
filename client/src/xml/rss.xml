@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Pizzare</title>
+  <link>https://pizzare.vercel.app</link>
+  <description>Faça o seu pedido agora, apenas com 3 cliques!</description>
+  <item>
+    <title>Pizzare - Login</title>
+    <link>https://pizzare.vercel.app/pages/user/login</link>
+    <description>Entre na sua conta agora e apeoveite os descontos da nossa pizzaria</description>
+  </item>
+</channel>
+</rss>
