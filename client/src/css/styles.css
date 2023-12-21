@@ -1,18 +1,24 @@
 :root {
   --primary: #FFE9D2;
   --secondary: #FFE1C4;
+  --tertiary: #ffe1c488;
   --title: #ff951f;
   --text-color: #000000ac;
 }
 
-body {
+#start-web-pizzare {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  background-color: var(--tertiary);
 }
 
 main {
   flex: 1 0 auto;
+  background-color: transparent;
+  padding: 5px;
 }
 
 nav {

@@ -1,29 +1,28 @@
-<html lang="en">
-<head>
+<html lang="pt-BR">
+ <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzare</title>
-
-  <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-     
-     <!-- jQuery -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Compiled and minified CSS and JS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
   <!-- LINK TO MATERIAL ICONS-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- LINK TO EXTERNAL CSS-->
   <link type="text/css" href="src/css/styles.css" rel="stylesheet">
 
-   <!-- LINK TO EXTERNAL JS -->
+  <!-- LINK TO EXTERNAL JS -->
   <script type="text/javascript" src="src/js/start.js"></script>
 
-    <!-- IOS SUPPORT -->
+  <!-- IOS SUPPORT -->
   <link rel="apple-touch-icon" href="src/img/favicon.ico" />
   
   <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
@@ -44,16 +43,20 @@
   <link rel="alternate" href="src/xml/atom.xml" title="Atom" type="application/atom+xml" />
   
   <!--- FAVICON --->
-   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
   
   <!-- LINK TO THE MANIFEST FILE -->
   <link rel="manifest" href="manifest.json">
-
-</head>
- <body>
- 
-  <!-- top nav -->
-  <nav class="nav-extended">
+  
+  <!-- start script firebase -->
+   <script type="module" src="src/js/firebase.js"></script>
+  <!-- end script firebase -->
+  
+ </head>
+<body id="start-web-pizzare">
+ <header>
+  <!-- start nav -->
+   <nav class="nav-extended">
     
      <div class="nav-wrapper">
        <a class="brand-logo" href="/">Pizzare</a>
@@ -94,31 +97,79 @@
       </ul>
     </div>
   </nav>
-  
-  <main>
+  <!-- end nav --->
+ </header>
+ 
+  <!-- page start --->
+   <main>    
     <div class="container">
+     <form class="col s12">
+      <div class="row">
+       <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" class="validate" data-length="45">
+          <label for="name">Nome completo</label>
+        </div>
+       <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="telephone" type="number" class="validate" data-length="13">
+          <label for="telephone">Telefone</label>
+        </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">email</i>
+       <input id="email" type="email" class="validate" data-length="85">
+          <label for="email">E-mail</label>
+     </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">password</i>
+       <input id="password" type="text" class="validate" data-length="12">
+          <label for="password">Senha</label>
+     </div>
+       <div class="switch">
+      <label>
+      <input type="checkbox">
+      <span class="lever"></span>
+      Eu concordo com os <a>termos e condições</a> deste estabelecimento
+    </label>
+  </div>
+       <div class="row center-align">
+      <div class="col s12 input-field">
+        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
+      </div>
+      <div class="col s6">
+       <a> Entrar na sua conta?</a>
+      </div>
+      <div class="col s6">
+        <a> Esqueceu sua senha?</a>
+      </div>
+  </div>
+      </div>
+     </form>
     </div>
-  </main>
-  
+   </main>
+  <!-- page end --->
 
-      <footer class="page-footer">
-        <ul class="tabs tabs-transparent">
-        <li class="tab"> 
-          <a href="#cart">
+  <!-- start footer --->
+   <footer class="page-footer">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"> 
+        <a href="#menu">
            <i class="material-icons">local_dining</i>
           </a>
-        </li>
-        <li class="tab"> 
-          <a href="#cart">
+      </li>
+      <li class="tab"> 
+        <a href="#location">
            <i class="material-icons">edit_location</i>
           </a>
-        </li>
-        <li class="tab"> 
-          <a href="#cart">
+      </li>
+      <li class="tab"> 
+        <a href="#event">
            <i class="material-icons">event</i>
           </a>
-        </li>
-        </ul>
-        </footer>
+      </li>
+    </ul>
+   </footer>
+  <!-- end footer --->
+  
  </body>
 </html>

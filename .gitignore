@@ -1,4 +1,5 @@
 # ignoring useless files and folders for the repository 
 
-server/node_modules
 server/package-lock.json
+server/src/config.js
+server/node_modules

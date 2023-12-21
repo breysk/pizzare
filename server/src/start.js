@@ -1,3 +1,4 @@
+import admin from 'firebase-admin';
 import config from './config.js';
 import body from 'body-parser';
 import webpush from 'web-push';
@@ -9,6 +10,29 @@ const app = express();
 app.use(morgan('combined'));
 app.use(body.json());
 app.use(cors());
+
+admin.initializeApp({
+  credential: admin.credential.cert(config.firebase)
+});
+
+const userCreationParams = {
+  email: 'sebastianjnuwu@gmail.com',
+  password: 'senha123',
+  displayName: 'Sebastian Jn',
+};
+
+admin.auth().createUser(userCreationParams)
+  .then((userRecord) => {
+    // Envia e-mail de verificação
+    return admin.auth().generateEmailVerificationLink(userCreationParams.email);
+  })
+  .then((link) => {
+    console.log('E-mail de verificação enviado para:', userCreationParams.email);
+    console.log('Link de verificação:', link);
+  })
+  .catch((error) => {
+    console.error('Erro ao criar usuário e enviar e-mail de verificação:', error);
+  });
 
 webpush.setGCMAPIKey(config.key._gcm);
 webpush.setVapidDetails(

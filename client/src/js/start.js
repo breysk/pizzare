@@ -16,6 +16,12 @@ if ('serviceWorker' in navigator) {
   });
 };
 
+
+$(document).ready(() => {
+  
+ $('input#name, input#telephone, input#password,  input#email').characterCounter();
+
+});
 /*
 const array_64 = (base64String) => {
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
