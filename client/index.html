@@ -1,43 +1,15 @@
-<html lang="pt-BR">
+<html lang="pt-br">
  <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzare</title>
   
-  <!-- jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <!-- Compiled and minified CSS and JS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-  <!-- LINK TO MATERIAL ICONS-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <!-- LINK TO EXTERNAL CSS-->
-  <link type="text/css" href="src/css/styles.css" rel="stylesheet">
-
-  <!-- LINK TO EXTERNAL JS -->
-  <script type="text/javascript" src="src/js/start.js"></script>
-
-  <!-- IOS SUPPORT -->
-  <link rel="apple-touch-icon" href="src/img/favicon.ico" />
-  
+  <!-- Icon for iOS device  -->
   <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
-  
-  <!-- SITEMAP -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="src/xml/sitemap.xml" />
   
   <!-- ROBOTS -->
   <meta name="robots" content="index, follow" />
-  
-  <!-- RSS -->
-  <link rel="alternate" href="src/xml/rss.xml" title="RSS" type="application/atom+xml" />
-  
-  <!-- ADDRESS JSON-LD -->
-  <script type="application/ld+json" src="src/js/address.json"></script>
   
   <!-- ATOM -->
   <link rel="alternate" href="src/xml/atom.xml" title="Atom" type="application/atom+xml" />
@@ -46,11 +18,40 @@
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
   
   <!-- LINK TO THE MANIFEST FILE -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="manifest.json"
+  >
+  <!-- RSS -->
+  <link rel="alternate" href="src/xml/rss.xml" title="RSS" type="application/atom+xml" />
+
+  <!-- Icon for iOS device  -->
+  <link rel="apple-touch-icon" href="src/img/favicon.ico" />
+  
+  <!-- full website map -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="src/xml/sitemap.xml" />
+  
+  <!-- Materialize  (css) -->
+  <link rel="stylesheet" href="src/modules/materialize.min.css" />
+
+  <!-- Personalized style (css) -->
+  <link type="text/css" href="src/css/styles.css" rel="stylesheet">
+    
+  <!-- Materialize (js) -->
+  <script src="src/modules/materialize.min.js"></script>
+ 
+   <!-- jQuery (js) -->
+  <script src="src/modules/jquery.min.js"></script>
+ 
+  <!-- Personalized script (js) -->
+  <script type="text/javascript" src="src/js/start.js"></script>
+  
+  <!-- Personalized script (js) -->
+  <script type="text/javascript" src="src/js/form.js"></script>
+  
+  <!-- ADDRESS JSON-LD -->
+  <script type="application/ld+json" src="src/js/address.json"></script>
   
   <!-- start script firebase -->
-   <script type="module" src="src/js/firebase.js"></script>
-  <!-- end script firebase -->
+  <script type="module" src="src/js/firebase.js"></script>
   
  </head>
 <body id="start-web-pizzare">
@@ -116,23 +117,33 @@
           <label for="telephone">Telefone</label>
         </div>
        <div class="input-field col s12">
+        <i class="material-icons prefix">image</i>
+        <input id="image" type="text" class="validate">
+        <label for="email">Foto de perfil</label>
+      </div>
+       <div class="input-field col s12">
        <i class="material-icons prefix">email</i>
        <input id="email" type="email" class="validate" data-length="85">
           <label for="email">E-mail</label>
      </div>
        <div class="input-field col s12">
+       <i class="material-icons prefix">cake</i>
+          <input type="date" class="datepicker">
+          <label for="cake">Data de nascimento</label>
+       </div>
+       <div class="input-field col s12">
        <i class="material-icons prefix">password</i>
        <input id="password" type="text" class="validate" data-length="12">
           <label for="password">Senha</label>
      </div>
-       <div class="switch">
+       <div class="switch col s12">
       <label>
       <input type="checkbox">
       <span class="lever"></span>
       Eu concordo com os <a>termos e condições</a> deste estabelecimento
     </label>
   </div>
-       <div class="row center-align">
+       <div class="center-align col s12">
       <div class="col s12 input-field">
         <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
       </div>

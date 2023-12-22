@@ -6,19 +6,40 @@
   --text-color: #000000ac;
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/M_Icons.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 #start-web-pizzare {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  scroll-behavior: smooth;
-  overflow-y: auto;
   background-color: var(--tertiary);
 }
 
 main {
   flex: 1 0 auto;
-  background-color: transparent;
-  padding: 5px;
+  overflow: auto;
+  padding: 10px;
 }
 
 nav {
@@ -61,6 +82,7 @@ nav .brand-logo img {
 }
 
 .page-footer {
+  bottom: 0 !important;
   background-color: var(--secondary) !important;
   color: var(--title) !important;
 }
