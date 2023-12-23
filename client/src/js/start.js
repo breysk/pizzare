@@ -1,5 +1,12 @@
 const server = `http://0.0.0.0:3000`;
 
+$(document).ready(() => {
+  
+  // count the characters in the form
+$('input#name, input#telephone, input#password,  input#email').characterCounter();
+
+});
+
 if ('serviceWorker' in navigator) {
 
   window.addEventListener('load', () => {

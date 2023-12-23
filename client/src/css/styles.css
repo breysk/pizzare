@@ -36,15 +36,24 @@
   background-color: var(--tertiary);
 }
 
-main {
-  flex: 1 0 auto;
-  overflow: auto;
-  padding: 10px;
+nav {
+  background: var(--secondary);
 }
 
-nav {
-  background: var(--primary);
-  border-bottom: 15px solid var(--secondary)
+main {
+ flex: 1 0 auto;
+ padding: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.page-footer {
+  width: 100%;
+  margin: 0;
+  bottom: 0;
+  background-color: var(--secondary) !important;
+  color: var(--title) !important;
 }
 
 nav .nav-wrapper {
@@ -81,8 +90,23 @@ nav .brand-logo img {
   opacity: 0.41;
 }
 
-.page-footer {
-  bottom: 0 !important;
-  background-color: var(--secondary) !important;
-  color: var(--title) !important;
+.loading {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-top: 5px solid orange;
+  border-radius: 50%;
+  transition: border-top 0.5s ease;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
 }

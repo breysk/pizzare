@@ -175,11 +175,5 @@
       "src": "/src/img/icons/ios/1024.png",
       "type": "image/png",
       "sizes": "1024x1024"
-    }],
-  "files": [
-    "/index.html",
-    "/src/css/styles.css",
-    "/src/js/start.js",
-    "/src/js/work.js"
-  ]
+    }]
 }

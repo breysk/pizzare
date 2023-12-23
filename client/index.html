@@ -35,17 +35,14 @@
   <!-- Personalized style (css) -->
   <link type="text/css" href="src/css/styles.css" rel="stylesheet">
     
+   <!-- jQuery (js) -->
+  <script src="src/modules/jquery.min.js"></script>
+
   <!-- Materialize (js) -->
   <script src="src/modules/materialize.min.js"></script>
  
-   <!-- jQuery (js) -->
-  <script src="src/modules/jquery.min.js"></script>
- 
   <!-- Personalized script (js) -->
   <script type="text/javascript" src="src/js/start.js"></script>
-  
-  <!-- Personalized script (js) -->
-  <script type="text/javascript" src="src/js/form.js"></script>
   
   <!-- ADDRESS JSON-LD -->
   <script type="application/ld+json" src="src/js/address.json"></script>
@@ -56,18 +53,12 @@
  </head>
 <body id="start-web-pizzare">
  <header>
-  <!-- start nav -->
-   <nav class="nav-extended">
+   <!-- start nav -->
+     <nav class="nav-extended">
     
      <div class="nav-wrapper">
        <a class="brand-logo" href="/">Pizzare</a>
       </div>
-
-<!---
-    <ul id="side-menu" class="sidenav side-menu">
-      <li><a class="subheader">Pizzare</a></li>
-      <li><a href="/" class="waves-effect">Home</a></li>
-    </ul> -->
 
   <div class="nav-content">
       <ul class="tabs tabs-transparent">
@@ -76,105 +67,56 @@
           </a>
         </li>
         <li class="tab"> 
-         <a href="#notification">
+         <a href="/pages/user/notifications.html">
            <i class="material-icons">notifications</i>
           </a>
         </li>
         <li class="tab"> 
-          <a href="#cart">
+          <a href="/pages/user/cart.html">
            <i class="material-icons">shopping_cart</i>
           </a>
         </li>
         <li class="tab"> 
-        <a href="#account">
+        <a href="/pages/user/index.html">
           <i class="material-icons">account_circle</i>
           </a>
         </li>
         <li class="tab"> 
-        <a href="#settings">
+        <a href="/pages/user/settings.html">
           <i class="material-icons">settings</i>
           </a>
         </li>
       </ul>
     </div>
   </nav>
-  <!-- end nav --->
+   <!-- end nav --->
  </header>
  
   <!-- page start --->
-   <main>    
-    <div class="container">
-     <form class="col s12">
-      <div class="row">
-       <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="name" type="text" class="validate" data-length="45">
-          <label for="name">Nome completo</label>
-        </div>
-       <div class="input-field col s6">
-          <i class="material-icons prefix">phone</i>
-          <input id="telephone" type="number" class="validate" data-length="13">
-          <label for="telephone">Telefone</label>
-        </div>
-       <div class="input-field col s12">
-        <i class="material-icons prefix">image</i>
-        <input id="image" type="text" class="validate">
-        <label for="email">Foto de perfil</label>
+  <main>
+    <section class="section">    
+      <div class="container">
+       <div class="loading"></div>
       </div>
-       <div class="input-field col s12">
-       <i class="material-icons prefix">email</i>
-       <input id="email" type="email" class="validate" data-length="85">
-          <label for="email">E-mail</label>
-     </div>
-       <div class="input-field col s12">
-       <i class="material-icons prefix">cake</i>
-          <input type="date" class="datepicker">
-          <label for="cake">Data de nascimento</label>
-       </div>
-       <div class="input-field col s12">
-       <i class="material-icons prefix">password</i>
-       <input id="password" type="text" class="validate" data-length="12">
-          <label for="password">Senha</label>
-     </div>
-       <div class="switch col s12">
-      <label>
-      <input type="checkbox">
-      <span class="lever"></span>
-      Eu concordo com os <a>termos e condições</a> deste estabelecimento
-    </label>
-  </div>
-       <div class="center-align col s12">
-      <div class="col s12 input-field">
-        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
-      </div>
-      <div class="col s6">
-       <a> Entrar na sua conta?</a>
-      </div>
-      <div class="col s6">
-        <a> Esqueceu sua senha?</a>
-      </div>
-  </div>
-      </div>
-     </form>
-    </div>
-   </main>
+    </section>
+  </main>
   <!-- page end --->
 
   <!-- start footer --->
    <footer class="page-footer">
     <ul class="tabs tabs-transparent">
       <li class="tab"> 
-        <a href="#menu">
+        <a href="/">
            <i class="material-icons">local_dining</i>
           </a>
       </li>
       <li class="tab"> 
-        <a href="#location">
+        <a href="/pages/user/location.html">
            <i class="material-icons">edit_location</i>
           </a>
       </li>
       <li class="tab"> 
-        <a href="#event">
+        <a href="/event.html">
            <i class="material-icons">event</i>
           </a>
       </li>
