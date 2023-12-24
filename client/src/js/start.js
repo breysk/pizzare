@@ -5,7 +5,37 @@ $(document).ready(() => {
   // count the characters in the form
 $('input#name, input#telephone, input#password,  input#email').characterCounter();
 
+$('.modal').modal();
+
+$('#account').on('click', async () => {
+  if (!localStorage.getItem('token')) {
+   await fetch(`${server}/user/token`, {
+     method: "POST",
+     body: { token: localStorage.getItem('token') }
+   }).then(async (response) => {
+       const res = await response.json();
+       localStorage.setItem('token', res.token);
+       localStorage.setItem('user', res.info);
+       return user_profile(localStorage.getItem('user'));
+    }).catch(err => {
+       if (!localStorage.getItem('user')) return net();
+       return user_profile(localStorage.getItem('user'));
+   });
+  } else {
+   $('.loading').css('display', 'none');
+   $('#login').css('display', 'inline');
+  };
 });
+
+});
+
+function net() {
+  console.log(false);
+}
+
+function user_profile() {
+  console.log(true);
+}
 
 if ('serviceWorker' in navigator) {
 
@@ -18,7 +48,6 @@ if ('serviceWorker' in navigator) {
       console.log('[ Pizzare ] - ServiceWorker is running')
     }).catch(err => {
       console.log(`[ Pizzare ] - Not working: ${err.message}`);
-
     });
   });
 };

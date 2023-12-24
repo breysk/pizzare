@@ -1,6 +1,7 @@
+<!DOCTYPE html>
 <html lang="pt-br">
  <head>
-  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pizzare</title>
@@ -77,7 +78,7 @@
           </a>
         </li>
         <li class="tab"> 
-        <a href="/pages/user/index.html">
+        <a id="account" class="modal-trigger" href="#user_modal_primary">
           <i class="material-icons">account_circle</i>
           </a>
         </li>
@@ -97,6 +98,7 @@
     <section class="section">    
       <div class="container">
        <div class="loading"></div>
+       
       </div>
     </section>
   </main>
@@ -123,6 +125,141 @@
     </ul>
    </footer>
   <!-- end footer --->
+    
+
+  <!-- início do modal do cliente -->
+   <div id="user_modal_primary" class="modal">
+    <nav class="nav-extended">
+     <div class="nav-wrapper">
+       <i class="brand-logo material-icons large">account_circle</i> 
+     </div>
+    </nav>
+     <div class="modal-content center-align">
+       
+       <div class="loading"></div>
+       
+       <!-- Início do formulário de login --->
+       <form id="login" style="display: none" class="col s12">
+      <div class="row">
+       <div class="input-field col s12">
+       <i class="material-icons prefix">email</i>
+       <input id="email" type="email" class="validate" data-length="85">
+          <label for="email">E-mail</label>
+     </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">password</i>
+       <input id="password" type="text" class="validate" data-length="12">
+          <label for="password">Senha</label>
+     </div>
+       <div class="center-align col s12">
+      <div class="col s12 input-field">
+        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Entrar</button>
+      </div>
+      <div class="col s6">
+       <a> Não tem uma conta?</a>
+      </div>
+      <div class="col s6">
+        <a> Esqueceu sua senha?</a>
+      </div>
+  </div>
+       </div>
+     </form>
+       <!-- Fim do formulário de login --->
+       
+       <!-- Início do formulário de #register --->
+       <form id="register" style="display: none" class="col s12">
+      <div class="row">
+       <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" class="validate" data-length="45">
+          <label for="name">Nome completo</label>
+        </div>
+       <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="telephone" type="number" class="validate" data-length="13">
+          <label for="telephone">Telefone</label>
+        </div>
+       <div class="input-field col s12">
+        <i class="material-icons prefix">image</i>
+        <input id="image" type="text" class="validate">
+        <label for="email">Foto de perfil</label>
+      </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">email</i>
+       <input id="email" type="email" class="validate" data-length="85">
+          <label for="email">E-mail</label>
+     </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">cake</i>
+          <input type="date" class="datepicker">
+          <label for="cake">Data de nascimento</label>
+       </div>
+       <div class="input-field col s12">
+       <i class="material-icons prefix">password</i>
+       <input id="password" type="text" class="validate" data-length="12">
+          <label for="password">Senha</label>
+     </div>
+       <div class="switch col s12">
+      <label>
+      <input type="checkbox">
+      <span class="lever"></span>
+      Eu concordo com os <a>termos e condições</a> deste estabelecimento
+    </label>
+  </div>
+       <div class="center-align col s12">
+      <div class="col s12 input-field">
+        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
+      </div>
+      <div class="col s6">
+       <a> Entrar na sua conta?</a>
+      </div>
+      <div class="col s6">
+        <a> Esqueceu sua senha?</a>
+      </div>
+  </div>
+       <div class="center-align col s12">
+      <div class="col s6">
+        
+      </div>
+      <div class="col s6">
+        
+      </div>
+  </div>
+      </div>
+     </form>
+       <!-- Fim do formulário de #register --->
+       
+       <!-- Início do formulário de recovery --->
+       <form id="recovery" style="display: none" class="col s12">
+      <div class="row">
+       <div class="input-field col s12">
+       <i class="material-icons prefix">email</i>
+       <input id="email" type="email" class="validate" data-length="85">
+          <label for="email">E-mail</label>
+     </div>
+       <div class="center-align col s12">
+      <div class="col s12 input-field">
+        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Enviar</button>
+      </div>
+      <div class="col s6">
+       <a href="/pages/user/auth/register.html"> Não tem uma conta?</a>
+      </div>
+      <div class="col s6">
+        <a href="/pages/user/auth/login.html"> Entrar na sua conta?</a>
+      </div>
+  </div>
+       </div>
+     </form>
+       <!-- Fim do formulário de recovery --->
+       
+     </div>
+    <div class="modal-footer">
+     <a class="modal-close waves-effect waves-orange btn-flat">
+        <i class="material-icons">close</i>
+     </a>
+   </div>
+  </div>
+  <!-- fim do modal do cliente -->
   
  </body>
 </html>

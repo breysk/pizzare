@@ -90,6 +90,14 @@ nav .brand-logo img {
   opacity: 0.41;
 }
 
+.modal {
+  background-color: var(--primary);
+}
+
+.modal-footer {
+  background-color: var(--secondary) !important;
+}
+
 .loading {
   display: inline-block;
   width: 100px;
