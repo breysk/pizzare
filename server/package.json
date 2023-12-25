@@ -1,10 +1,23 @@
 {
   "name": "server-pizzare",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "type": "module",
   "main": "src/start.js",
   "author": "sebastianjnuwu",
   "license": "Apache-2.0",
+  "scripts": {
+    "babel": "babel-node src/start.js",
+    "start": "node src/start.js"
+  },
+  "imports": {
+    "#config": "./src/config.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/core": "^7.22.9",
+    "@babel/node": "^7.22.6",
+    "@babel/preset-env": "^7.22.9"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",

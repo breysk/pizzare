@@ -45,11 +45,14 @@
   <!-- Personalized script (js) -->
   <script type="text/javascript" src="src/js/start.js"></script>
   
+  <!-- Personalized script (js) -->
+  <script type="text/javascript" src="src/js/form.js"></script>
+  
   <!-- ADDRESS JSON-LD -->
   <script type="application/ld+json" src="src/js/address.json"></script>
   
   <!-- start script firebase -->
-  <script type="module" src="src/js/firebase.js"></script>
+  <script defer="true" type="module" src="src/js/firebase.js"></script>
   
  </head>
 <body id="start-web-pizzare">
@@ -149,7 +152,7 @@
      </div>
        <div class="center-align col s12">
       <div class="col s12 input-field">
-        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Entrar</button>
+        <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Entrar</button>
       </div>
       <div class="col s6">
        <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>
@@ -174,11 +177,19 @@
      <div class="nav-wrapper">
        <i class="brand-logo material-icons large">account_circle</i> 
      </div>
-    </nav>
+    </nav> 
      <div class="modal-content center-align">
-       <div class="loading"></div>
-         <form id="register" class="col s12">
+     <form id="register" class="col s12">
       <div class="row">
+       <div class="input-field file-field col s12">
+    <div style="border-radius: 10px"class="btn orange">
+      <i class="material-icons">camera</i>
+      <input type="file" accept="image/jpeg, image/png, image/jpg">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Envie sua foto de perfil">
+      </div>
+    </div>
        <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
           <input id="name" type="text" class="validate" data-length="45">
@@ -189,11 +200,6 @@
           <input id="telephone" type="number" class="validate" data-length="13">
           <label for="telephone">Telefone</label>
         </div>
-       <div class="input-field col s12">
-        <i class="material-icons prefix">image</i>
-        <input id="image" type="text" class="validate">
-        <label for="email">Foto de perfil</label>
-      </div>
        <div class="input-field col s12">
        <i class="material-icons prefix">email</i>
        <input id="email" type="email" class="validate" data-length="85">
@@ -217,8 +223,8 @@
     </label>
   </div>
        <div class="center-align col s12">
-      <div class="col s12 input-field">
-        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
+       <div class="col s12 input-field">
+        <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Register</button>
       </div>
       <div class="col s6">
        <a class="modal-trigger modal-close" href="#user_modal_primary"> Ja tem uma conta?</a>
@@ -256,7 +262,7 @@
      </div>
        <div class="center-align col s12">
       <div class="col s12 input-field">
-        <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Enviar</button>
+        <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Enviar</button>
       </div>
       <div class="col s6">
        <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>

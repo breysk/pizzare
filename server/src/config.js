@@ -1,4 +1,8 @@
 export default {
+  server: {
+    origin: "*",
+    port: 3000,
+  },
   user: {
     name: 'Sebastian Jn',
     social: 'sebastianjnuwu',
