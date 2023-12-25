@@ -98,7 +98,6 @@
     <section class="section">    
       <div class="container">
        <div class="loading"></div>
-       
       </div>
     </section>
   </main>
@@ -127,18 +126,15 @@
   <!-- end footer --->
     
 
-  <!-- início do modal do cliente -->
-   <div id="user_modal_primary" class="modal">
+  <!-- início do modal de login / info cliente -->
+  <div id="user_modal_primary" class="modal">
     <nav class="nav-extended">
      <div class="nav-wrapper">
        <i class="brand-logo material-icons large">account_circle</i> 
      </div>
     </nav>
      <div class="modal-content center-align">
-       
        <div class="loading"></div>
-       
-       <!-- Início do formulário de login --->
        <form id="login" style="display: none" class="col s12">
       <div class="row">
        <div class="input-field col s12">
@@ -156,18 +152,32 @@
         <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Entrar</button>
       </div>
       <div class="col s6">
-       <a> Não tem uma conta?</a>
+       <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>
       </div>
       <div class="col s6">
-        <a> Esqueceu sua senha?</a>
+        <a class="modal-trigger modal-close" href="#user_modal_tertiary"> Esqueceu sua senha?</a>
       </div>
   </div>
        </div>
      </form>
-       <!-- Fim do formulário de login --->
-       
-       <!-- Início do formulário de #register --->
-       <form id="register" style="display: none" class="col s12">
+     </div>
+    <div class="modal-footer">
+     <a class="modal-close waves-effect waves-orange btn-flat">
+        <i class="material-icons">close</i>
+     </a>
+   </div>
+  </div>
+  
+  <!-- início do modal de register -->
+  <div id="user_modal_secondary" class="modal">
+    <nav class="nav-extended">
+     <div class="nav-wrapper">
+       <i class="brand-logo material-icons large">account_circle</i> 
+     </div>
+    </nav>
+     <div class="modal-content center-align">
+       <div class="loading"></div>
+         <form id="register" class="col s12">
       <div class="row">
        <div class="input-field col s6">
           <i class="material-icons prefix">account_circle</i>
@@ -211,26 +221,33 @@
         <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Register</button>
       </div>
       <div class="col s6">
-       <a> Entrar na sua conta?</a>
+       <a class="modal-trigger modal-close" href="#user_modal_primary"> Ja tem uma conta?</a>
       </div>
       <div class="col s6">
-        <a> Esqueceu sua senha?</a>
+        <a class="modal-trigger modal-close" href="#user_modal_tertiary"> Esqueceu sua senha?</a>
       </div>
   </div>
-       <div class="center-align col s12">
-      <div class="col s6">
-        
-      </div>
-      <div class="col s6">
-        
-      </div>
-  </div>
+
       </div>
      </form>
-       <!-- Fim do formulário de #register --->
-       
-       <!-- Início do formulário de recovery --->
-       <form id="recovery" style="display: none" class="col s12">
+     </div>
+    <div class="modal-footer">
+     <a class="modal-close waves-effect waves-orange btn-flat">
+        <i class="material-icons">close</i>
+     </a>
+   </div>
+  </div>
+  
+  <!-- início do modal de recovery -->
+  <div id="user_modal_tertiary" class="modal">
+    <nav class="nav-extended">
+     <div class="nav-wrapper">
+       <i class="brand-logo material-icons large">account_circle</i> 
+     </div>
+    </nav>
+     <div class="modal-content center-align">
+       <div class="loading"></div>
+       <form id="recovery" class="col s12">
       <div class="row">
        <div class="input-field col s12">
        <i class="material-icons prefix">email</i>
@@ -242,16 +259,14 @@
         <button class="waves-effect waves-light btn"><i class="material-icons left">send</i>Enviar</button>
       </div>
       <div class="col s6">
-       <a href="/pages/user/auth/register.html"> Não tem uma conta?</a>
+       <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>
       </div>
       <div class="col s6">
-        <a href="/pages/user/auth/login.html"> Entrar na sua conta?</a>
+        <a class="modal-trigger modal-close" href="#user_modal_primary"> Ja tem uma conta?</a>
       </div>
   </div>
        </div>
      </form>
-       <!-- Fim do formulário de recovery --->
-       
      </div>
     <div class="modal-footer">
      <a class="modal-close waves-effect waves-orange btn-flat">
@@ -259,7 +274,6 @@
      </a>
    </div>
   </div>
-  <!-- fim do modal do cliente -->
   
  </body>
 </html>

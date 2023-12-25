@@ -8,7 +8,7 @@ $('input#name, input#telephone, input#password,  input#email').characterCounter(
 $('.modal').modal();
 
 $('#account').on('click', async () => {
-  if (!localStorage.getItem('token')) {
+  if (localStorage.getItem('token')) {
    await fetch(`${server}/user/token`, {
      method: "POST",
      body: { token: localStorage.getItem('token') }
@@ -22,7 +22,7 @@ $('#account').on('click', async () => {
        return user_profile(localStorage.getItem('user'));
    });
   } else {
-   $('.loading').css('display', 'none');
+   $('.modal .loading').css('display', 'none');
    $('#login').css('display', 'inline');
   };
 });
