@@ -10,7 +10,10 @@
     "start": "node src/start.js"
   },
   "imports": {
-    "#config": "./src/config.js"
+    "#functions/*": "./src/functions/*.js",
+    "#config": "./src/.config/config.js",
+    "#controller/*": "./src/controller/*.js",
+    "#routes/*": "./src/routes/*.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.9",
@@ -24,6 +27,7 @@
     "express": "^4.18.2",
     "fastify": "^4.25.1",
     "firebase-admin": "^12.0.0",
+    "joi": "^17.11.0",
     "morgan": "^1.10.0",
     "web-push": "^3.6.6"
   }

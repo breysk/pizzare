@@ -1,4 +1,6 @@
-const server = `http://0.0.0.0:3000`;
+const api = `http://0.0.0.0:3000`;
+
+//console.log(Base64.encode(server.url));
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
@@ -61,3 +63,31 @@ const abc = JSON.stringify(window.user_key.toJSON(), null, 2);
     .then((res) => console.log('successfully send subscription to server'))
     .catch((err) => console.error('error while sending to server', err));
 a()*/
+
+/*  const input = document.getElementById("selectAvatar");
+  const avatar = document.getElementById("avatar");
+  const text = document.getElementById("textAreaExample");
+
+const convert = (file) => {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+
+const upload = async (e) => {
+    const link = await convert(e.target.files[0]);
+    avatar.src = link;
+    text.inerText = link;
+};
+
+input.addEventListener("change", (e) => upload(e));
+*/

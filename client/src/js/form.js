@@ -5,22 +5,34 @@ $('input#name, input#telephone, input#password,  input#email').characterCounter(
 $('.modal').modal();
 
 $('#account').on('click', async () => {
-  if (localStorage.getItem('user')) {
-   await fetch(`${server}/user/token`, {
-     method: "POST",
-     body: { token: localStorage.getItem('token') }
-   }).then(async(res) => {
-      const { token, user } = await res.json();
-      localStorage.setItem('token', token);
-      localStorage.setItem('user', user);
-      return user(localStorage.getItem('user'));
-   }).catch((err) => {
-      return user(localStorage.getItem('user') || false);
-   });
-  } else {
-    return user(false);
+  if (Cookies.get('token')) {
+  await fetch(`${api}/user/` + Cookies.get('token'))
+  .then(async(res) => {
+    const { user } = await res.json();
+    localStorage.setItem('user', user);
+    return user(localStorage.getItem('user'));
+  }).catch((err) => {
+    return user(localStorage.getItem('user') || false);
+  });
+   } else {
+     return user(false);
   };
 });
+
+
+$("#register").submit(async (event) => {
+  event.preventDefault();
+
+  
+ await fetch(`${api}/user/register`, {
+  body: {
+   image, name, telephone, email, date, password
+  }
+ }).then(async(res) => {
+  
+ }).catch((err) => {
+    
+ });
 
 });
 

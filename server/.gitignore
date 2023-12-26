@@ -2,7 +2,9 @@
 node_modules
 
 # settings file 
-src/config.js
+src/.config/config.js
+config.yml
+.env
 
 # useless files 
 package-lock.json
