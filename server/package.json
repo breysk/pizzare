@@ -11,7 +11,8 @@
   },
   "imports": {
     "#functions/*": "./src/functions/*.js",
-    "#config": "./src/.config/config.js",
+    "#model/*": "./src/model/*.js",
+    "#config/*": "./src/.config/*.js",
     "#controller/*": "./src/controller/*.js",
     "#routes/*": "./src/routes/*.js"
   },
@@ -25,10 +26,12 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "fastify": "^4.25.1",
+    "firebase": "^10.7.1",
     "firebase-admin": "^12.0.0",
     "joi": "^17.11.0",
     "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^9.0.1",
     "web-push": "^3.6.6"
   }
 }

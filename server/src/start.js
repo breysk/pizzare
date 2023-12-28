@@ -1,7 +1,7 @@
+import config from '#config/config';
 import body from 'body-parser';
 import user from '#routes/user';
 import express from 'express';
-import config from '#config';
 import morgan from 'morgan';
 import cors from 'cors';
 const app = express();
@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('combined'));
 app.use(body.json());
 app.use(cors({
-  origin: config.server.origin,
+  origin: ['*'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
+  allowedHeaders: ['*'],
   credentials: true
 }));
 

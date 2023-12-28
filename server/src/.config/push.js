@@ -1,4 +1,4 @@
-import config from '#config';
+import config from '#config/config';
 import push from 'web-push'
 
 webpush.setGCMAPIKey(config.key._gcm);

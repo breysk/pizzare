@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,8 +35,6 @@
   <!-- Personalized style (css) -->
   <link type="text/css" href="src/css/styles.css" rel="stylesheet">
   
-  <link type="text/css" href="src/css/section.css" rel="stylesheet">
-  
   <!--- base-64 -->
   <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js"></script>
   
@@ -49,18 +46,18 @@
   
   <!-- Materialize (js) -->
   <script src="src/modules/materialize.min.js"></script>
+
+  <!-- Personalized script (js) -->
+  <script src="src/js/start.js"></script>
   
   <!-- Personalized script (js) -->
-  <script type="text/javascript" src="src/js/start.js"></script>
-  
-  <!-- Personalized script (js) -->
-  <script type="text/javascript" src="src/js/form.js"></script>
+  <script src="src/js/form.js"></script>
   
   <!-- ADDRESS JSON-LD -->
   <script type="application/ld+json" src="src/js/address.json"></script>
   
   <!-- start script firebase -->
-  <script defer="true" type="module" src="src/js/firebase.js"></script>
+  <script defer type="module" src="src/js/firebase.js"></script>
   
 </head>
 
@@ -132,8 +129,7 @@
     </ul>
   </footer>
   <!-- end footer --->
-  
-  
+ 
   <!-- início do modal de login / info cliente -->
   <div id="user_modal_primary" class="modal">
     <nav class="nav-extended">
@@ -189,10 +185,10 @@
   <div class="input-field file-field col s12">
     <div style="border-radius: 10px" class="btn orange">
       <i class="material-icons">camera</i>
-      <input type="file" required>
+      <input type="file" id="img" accept="image/*" required>
     </div>
     <div class="file-path-wrapper">
-      <input id="photo" class="file-path validate" type="text" placeholder="Envie sua foto de perfil">
+      <input id="file_text" class="file-path validate" type="text" placeholder="Envie sua foto de perfil">
     </div>
   </div>
   <div class="input-field col s6">

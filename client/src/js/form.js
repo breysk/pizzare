@@ -10,39 +10,66 @@ $('#account').on('click', async () => {
   .then(async(res) => {
     const { user } = await res.json();
     localStorage.setItem('user', user);
-    return user(localStorage.getItem('user'));
+    return _user(localStorage.getItem('user'));
   }).catch((err) => {
-    return user(localStorage.getItem('user') || false);
+    return _user(localStorage.getItem('user') || false);
   });
    } else {
-     return user(false);
+     return _user(false);
   };
 });
-
 
 $("#register").submit(async (event) => {
   event.preventDefault();
-
   
- await fetch(`${api}/user/register`, {
+  const file = $('#register #img');
+  const img = file[0].files[0];
+  
+  if (!img.type.includes('image')) {
+    $('#register #file_text').addClass('invalid');
+    return;
+  }
+  
+  const image = await _img(img);
+  const name = $('#register #name').val();
+  const telephone = $('#register #telephone').val();
+  const email = $('#register #email').val();
+  const date = $('#register #date').val();
+  const password = $('#register #password').val();
+  
+  await fetch(`${api}/user/register`, {
+  method: 'POST',
   body: {
    image, name, telephone, email, date, password
   }
- }).then(async(res) => {
-  
- }).catch((err) => {
-    
+  }).then(async(res) => {
+    console.log(res)
+  }).catch((err) => {
+    console.log(err)
  });
 
 });
+  
+});
 
-
-async function user(hash) {
-  console.log(hash)
+async function _user(hash) {
   if (!hash) {
-    console.log(true);
     $('.loading').css('display', 'none');
     $('#login').css('display', 'inline');
   };
-  
-}
+};
+
+async function _img(file) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
