@@ -6,6 +6,34 @@
   --text-color: #000000ac;
 }
 
+#start-web-pizzare {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: var(--tertiary);
+}
+
+nav {
+  background: var(--secondary);
+}
+
+nav .nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+nav .brand-logo {
+  color: var(--title);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+nav .brand-logo img {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;
@@ -28,15 +56,9 @@
   -webkit-font-smoothing: antialiased;
 }
 
-#start-web-pizzare {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: var(--tertiary);
-}
-
-nav {
-  background: var(--secondary);
+.tab a {
+  color: var(--title) !important;
+  font-weight: bold;
 }
 
 main {
@@ -47,34 +69,20 @@ main {
  align-items: center;
 }
 
+.modal {
+  background-color: var(--primary);
+}
+
+.modal-footer {
+  background-color: var(--secondary) !important;
+}
+
 .page-footer {
   width: 100%;
   margin: 0;
   bottom: 0;
   background-color: var(--secondary) !important;
   color: var(--title) !important;
-}
-
-nav .nav-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-nav .brand-logo {
-  color: var(--title);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-nav .brand-logo img {
-  width: 25%;
-  height: 25%;
-  border-radius: 50%;
-}
-
-.tab a {
-  color: var(--title) !important;
-  font-weight: bold;
 }
 
 .material-icons {
@@ -87,14 +95,6 @@ nav .brand-logo img {
   color: #ec9300ac;
   transform: scale(0.98);
   opacity: 0.41;
-}
-
-.modal {
-  background-color: var(--primary);
-}
-
-.modal-footer {
-  background-color: var(--secondary) !important;
 }
 
 .loading {

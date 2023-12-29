@@ -4,9 +4,15 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Pizzare</title>
   
-  <!-- Icon for iOS device  -->
+  <meta name="description" content="Quem quer pizza? Eu! Pagando leva ate a pizzaria." />
+  
+  <!-- Cor da barra do navegador -->
+  <meta name="theme-color" content="#FFE9D2" />
+  
+  <!-- Ícone para dispositivo iOS -->
   <meta name="apple-mobile-web-app-status-bar" content="#aa7700" />
   
   <!-- ROBOTS -->
@@ -18,27 +24,25 @@
   <!--- FAVICON --->
   <link rel="shortcut icon" href="src/img/favicon.ico" type="image/x-icon" />
   
-  <!-- LINK TO THE MANIFEST FILE -->
+  <!-- LINK PARA O ARQUIVO MANIFESTO -->
   <link rel="manifest" href="manifest.json">
+  
   <!-- RSS -->
   <link rel="alternate" href="src/xml/rss.xml" title="RSS" type="application/atom+xml" />
   
-  <!-- Icon for iOS device  -->
+  <!-- Ícone para dispositivo iOS -->
   <link rel="apple-touch-icon" href="src/img/favicon.ico" />
   
-  <!-- full website map -->
+  <!-- Full website map -->
   <link rel="sitemap" type="application/xml" title="Sitemap" href="src/xml/sitemap.xml" />
   
   <!-- Materialize  (css) -->
   <link rel="stylesheet" href="src/modules/materialize.min.css" />
   
-  <!-- Personalized style (css) -->
+  <!-- Estilo personalizado (css) -->
   <link type="text/css" href="src/css/styles.css" rel="stylesheet">
   
-  <!--- base-64 -->
-  <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js"></script>
-  
-  <!--- cookie -->
+  <!--- Cookie -->
   <script src="src/modules/js.cookie.min.js"></script>
   
   <!-- jQuery (js) -->
@@ -47,22 +51,20 @@
   <!-- Materialize (js) -->
   <script src="src/modules/materialize.min.js"></script>
 
-  <!-- Personalized script (js) -->
+  <!-- Script personalizado (js) -->
   <script src="src/js/start.js"></script>
   
-  <!-- Personalized script (js) -->
-  <script src="src/js/form.js"></script>
+  <!-- ENDEREÇO JSON-LD -->
+  <script defer type="application/ld+json" src="src/js/address.json"></script>
   
-  <!-- ADDRESS JSON-LD -->
-  <script type="application/ld+json" src="src/js/address.json"></script>
-  
-  <!-- start script firebase -->
-  <script defer type="module" src="src/js/firebase.js"></script>
+  <!-- Iniciar script firebase -->
+  <script defer type="module" src="src/service/firebase.js"></script>
   
 </head>
-
-<body id="start-web-pizzare">
-  <header>
+ <body id="start-web-pizzare">
+  
+  <!-- Início do cabeçario -->
+   <header>
     <!-- start nav -->
     <nav class="nav-extended">
       
@@ -77,23 +79,18 @@
             </a>
           </li>
           <li class="tab">
-            <a href="/pages/user/notifications.html">
+            <a href="#user_notification">
               <i class="material-icons">notifications</i>
             </a>
           </li>
           <li class="tab">
-            <a href="/pages/user/cart.html">
+            <a href="#user_cart">
               <i class="material-icons">shopping_cart</i>
             </a>
           </li>
           <li class="tab">
-            <a id="account" class="modal-trigger" href="#user_modal_primary">
+            <a id="account" class="modal-trigger" href="#user_modal">
               <i class="material-icons">account_circle</i>
-            </a>
-          </li>
-          <li class="tab">
-            <a href="/pages/user/settings.html">
-              <i class="material-icons">settings</i>
             </a>
           </li>
         </ul>
@@ -101,15 +98,15 @@
     </nav>
     <!-- end nav --->
   </header>
+  <!-- Fim do cabeçario --->
   
-  <!-- page start --->
-  <main>
-
+  <!-- Início da página principal --->
+   <main>
   </main>
-  <!-- page end --->
+  <!-- Fim da página principal --->
   
-  <!-- start footer --->
-  <footer class="page-footer">
+  <!-- Início do rodapé --->
+   <footer class="page-footer">
     <ul class="tabs tabs-transparent">
       <li class="tab">
         <a href="/">
@@ -117,21 +114,16 @@
         </a>
       </li>
       <li class="tab">
-        <a href="/pages/user/location.html">
+        <a href="#user_location">
           <i class="material-icons">edit_location</i>
-        </a>
-      </li>
-      <li class="tab">
-        <a href="/event.html">
-          <i class="material-icons">event</i>
         </a>
       </li>
     </ul>
   </footer>
-  <!-- end footer --->
+  <!-- Fim do rodapé --->
  
-  <!-- início do modal de login / info cliente -->
-  <div id="user_modal_primary" class="modal">
+  <!-- Início do modal de login / usuário -->
+   <div id="user_modal" class="modal">
     <nav class="nav-extended">
       <div class="nav-wrapper">
         <i class="brand-logo material-icons large">account_circle</i>
@@ -139,31 +131,7 @@
     </nav>
     <div class="modal-content center-align">
       <div class="loading"></div>
-      <form id="login" style="display: none" class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">email</i>
-            <input id="email" type="email" class="validate" data-length="98" minlength="16" maxlength="98" required>
-            <label for="email">E-mail</label>
-          </div>
-          <div class="input-field col s12">
-            <i class="material-icons prefix">password</i>
-            <input id="password" type="text" class="validate" data-length="12" minlength="6" maxlength="12" required>
-            <label for="password">Senha</label>
-          </div>
-          <div class="center-align col s12">
-            <div class="col s12 input-field">
-              <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Entrar</button>
-            </div>
-            <div class="col s6">
-              <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>
-            </div>
-            <div class="col s6">
-              <a class="modal-trigger modal-close" href="#user_modal_tertiary"> Esqueceu sua senha?</a>
-            </div>
-          </div>
-        </div>
-      </form>
+      <div class="login"></div>
     </div>
     <div class="modal-footer">
       <a class="modal-close waves-effect waves-orange btn-flat">
@@ -171,115 +139,7 @@
       </a>
     </div>
   </div>
-  
-  <!-- início do modal de register -->
-  <div id="user_modal_secondary" class="modal">
-    <nav class="nav-extended">
-      <div class="nav-wrapper">
-        <i class="brand-logo material-icons large">account_circle</i>
-      </div>
-    </nav>
-    <div class="modal-content center-align">
-      <form id="register" class="col s12">
-        <div class="row">
-  <div class="input-field file-field col s12">
-    <div style="border-radius: 10px" class="btn orange">
-      <i class="material-icons">camera</i>
-      <input type="file" id="img" accept="image/*" required>
-    </div>
-    <div class="file-path-wrapper">
-      <input id="file_text" class="file-path validate" type="text" placeholder="Envie sua foto de perfil">
-    </div>
-  </div>
-  <div class="input-field col s6">
-    <i class="material-icons prefix">account_circle</i>
-    <input id="name" type="text" class="validate" data-length="45" minlength="4" maxlength="45" required>
-    <label for="name">Nome completo</label>
-  </div>
-  <div class="input-field col s6">
-    <i class="material-icons prefix">phone</i>
-    <input id="telephone" type="tel" class="validate" data-length="13" minlength="11" maxlength="13" required>
-    <label for="telephone">Telefone</label>
-  </div>
-  <div class="input-field col s12">
-   <i class="material-icons prefix">email</i>
-   <input id="email" type="email" class="validate" data-length="85" minlength="16" maxlength="98" required>
-    <label for="email">E-mail</label>
-  </div>
-  <div class="input-field col s12">
-    <i class="material-icons prefix">cake</i>
-    <input id="date" type="date" class="datepicker" required>
-    <label for="cake">Data de nascimento</label>
-  </div>
-  <div class="input-field col s12">
-    <i class="material-icons prefix">password</i>
-    <input id="password" type="text" class="validate" data-length="12" minlength="6" maxlength="12" required>
-    <label for="password">Senha</label>
-  </div>
-  <div class="switch col s12">
-    <label>
-      <input type="checkbox">
-      <span class="lever"></span>
-      Eu concordo com os <a>termos e condições</a> deste estabelecimento
-    </label>
-  </div>
-  <div class="center-align col s12">
-    <div class="col s12 input-field">
-      <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Register</button>
-    </div>
-    <div class="col s6">
-      <a class="modal-trigger modal-close" href="#user_modal_primary"> Ja tem uma conta?</a>
-    </div>
-    <div class="col s6">
-      <a class="modal-trigger modal-close" href="#user_modal_tertiary"> Esqueceu sua senha?</a>
-    </div>
-  </div>
-</div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-orange btn-flat">
-        <i class="material-icons">close</i>
-      </a>
-    </div>
-  </div>
-  
-  <!-- início do modal de recovery -->
-  <div id="user_modal_tertiary" class="modal">
-    <nav class="nav-extended">
-      <div class="nav-wrapper">
-        <i class="brand-logo material-icons large">account_circle</i>
-      </div>
-    </nav>
-    <div class="modal-content center-align">
-      <div class="loading"></div>
-      <form id="recovery" class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <i class="material-icons prefix">email</i>
-            <input id="email" type="email" class="validate" data-length="98" minlength="16" maxlength="98" required>
-            <label for="email">E-mail</label>
-          </div>
-          <div class="center-align col s12">
-            <div class="col s12 input-field">
-              <button class="waves-effect waves-light btn orange"><i class="material-icons left">send</i>Enviar</button>
-            </div>
-            <div class="col s6">
-              <a class="modal-trigger modal-close" href="#user_modal_secondary"> Não tem uma conta?</a>
-            </div>
-            <div class="col s6">
-              <a class="modal-trigger modal-close" href="#user_modal_primary"> Ja tem uma conta?</a>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-    <div class="modal-footer">
-      <a class="modal-close waves-effect waves-orange btn-flat">
-        <i class="material-icons">close</i>
-      </a>
-    </div>
-  </div>
+  <!-- Fim do modal de login / usuário -->
   
  </body>
 </html>
