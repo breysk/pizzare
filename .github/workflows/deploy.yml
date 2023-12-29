@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 💞 Github actions...
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: 🌈 Deploy with ssh...
         uses: sebastianjnuwu/ssh-action-deploy@action
         with:
